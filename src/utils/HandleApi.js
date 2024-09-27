@@ -10,6 +10,7 @@ const getAllTodo = (setTodo)=>{
 }
 
 const addTodo = (text,setText,setTodo)=>{
+    console.log(text)
     axios.post(`${baseUrl}/save`,{text})
     .then((data)=>{
         console.log(`Data: ${data}`);
@@ -17,8 +18,7 @@ const addTodo = (text,setText,setTodo)=>{
         getAllTodo(setTodo);
     })
     .catch((error)=>{
-        console.log(text)
-        console.log(`Error: DAMN ${error}`)
+        console.log(`Error: ${error}`)
     })
 }
 
