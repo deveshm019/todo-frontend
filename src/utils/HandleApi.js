@@ -10,7 +10,6 @@ const getAllTodo = (setTodo)=>{
 }
 
 const addTodo = (text,setText,setTodo)=>{
-    console.log("Test Add")
     axios.post(`${baseUrl}/save`,{text})
     .then((data)=>{
         console.log(`Data: ${data}`);
@@ -23,7 +22,6 @@ const addTodo = (text,setText,setTodo)=>{
 }
 
 const updateTodo = (todoId,text,setTodo,setText,setIsUpdating)=>{
-    console.log("Test Update")
     axios.post(`${baseUrl}/update`,{_id: todoId,text})
     .then((data)=>{
         setText("");
@@ -36,7 +34,6 @@ const updateTodo = (todoId,text,setTodo,setText,setIsUpdating)=>{
 }
 
 const deleteTodo = (_id,setTodo)=>{
-    console.log("Test Delete")
     axios.post(`${baseUrl}/delete`,{_id})
     .then((data)=>{
         getAllTodo(setTodo);
