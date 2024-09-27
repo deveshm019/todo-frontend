@@ -10,7 +10,7 @@ const getAllTodo = (setTodo)=>{
 }
 
 const addTodo = (text,setText,setTodo)=>{
-    axios.post(`${baseUrl}save`,{text})
+    axios.post(`${baseUrl}/save`,{text})
     .then((data)=>{
         console.log(`Data: ${data}`);
         setText("");
@@ -23,7 +23,7 @@ const addTodo = (text,setText,setTodo)=>{
 }
 
 const updateTodo = (todoId,text,setTodo,setText,setIsUpdating)=>{
-    axios.post(`${baseUrl}update`,{_id: todoId,text})
+    axios.post(`${baseUrl}/update`,{_id: todoId,text})
     .then((data)=>{
         setText("");
         setIsUpdating(false);
@@ -35,7 +35,7 @@ const updateTodo = (todoId,text,setTodo,setText,setIsUpdating)=>{
 }
 
 const deleteTodo = (_id,setTodo)=>{
-    axios.post(`${baseUrl}delete`,{_id})
+    axios.post(`${baseUrl}/delete`,{_id})
     .then((data)=>{
         getAllTodo(setTodo);
     })
