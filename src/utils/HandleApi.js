@@ -17,6 +17,7 @@ const addTodo = (text,setText,setTodo)=>{
         getAllTodo(setTodo);
     })
     .catch((error)=>{
+        console.log(text)
         console.log(`Error: ${error}`)
     })
 }
