@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = "https://todo-backend-k7ad.onrender.com"
+const baseUrl = "https://todo-backend-cbgx.onrender.com"
 
 const getAllTodo = (setTodo)=>{
     axios.get(baseUrl).then(({data})=>{
