@@ -18,7 +18,7 @@ const addTodo = (text,setText,setTodo)=>{
     })
     .catch((error)=>{
         console.log(text)
-        console.log(`Error: ${error}`)
+        console.log(`Error: ${error.message}`)
     })
 }
 
